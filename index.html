@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>DC INK IT | Premium Tattoo Artist</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Montserrat',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#000;
+color:white;
+}
+
+nav{
+position:fixed;
+width:100%;
+top:0;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,.85);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+.logo{
+font-size:28px;
+font-weight:900;
+color:#D4AF37;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:30px;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+font-weight:500;
+}
+
+.hero{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:0 20px;
+background:
+linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.8)),
+url('dc background.jpeg');
+background-size:cover;
+background-position:center;
+}
+
+.hero-content h1{
+font-size:70px;
+margin-bottom:20px;
+}
+
+.gold{
+color:#D4AF37;
+}
+
+.hero-content p{
+font-size:22px;
+max-width:700px;
+margin:auto;
+line-height:1.7;
+}
+
+.buttons{
+margin-top:40px;
+}
+
+.btn{
+padding:15px 35px;
+border:none;
+cursor:pointer;
+margin:10px;
+font-weight:700;
+border-radius:50px;
+transition:.3s;
+}
+
+.primary{
+background:#D4AF37;
+color:black;
+}
+
+.secondary{
+background:transparent;
+border:2px solid #D4AF37;
+color:#D4AF37;
+}
+
+.btn:hover{
+transform:translateY(-5px);
+}
+
+section{
+padding:100px 8%;
+}
+
+.section-title{
+font-size:50px;
+margin-bottom:50px;
+text-align:center;
+color:#D4AF37;
+}
+
+.about{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:center;
+}
+
+.about img{
+width:100%;
+border-radius:20px;
+}
+
+.about-text p{
+line-height:1.9;
+color:#ccc;
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+margin-top:50px;
+}
+
+.stat{
+background:#111;
+padding:30px;
+text-align:center;
+border-radius:15px;
+}
+
+.stat h3{
+font-size:40px;
+color:#D4AF37;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+height:350px;
+object-fit:cover;
+border-radius:15px;
+transition:.4s;
+cursor:pointer;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+#services{
+background:
+linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.8)),
+url('dc background.jpeg');
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+}
+
+.card{
+background:rgba(17,17,17,0.85);
+padding:30px;
+border-radius:15px;
+transition:.3s;
+}
+
+.card:hover{
+border:1px solid #D4AF37;
+transform:translateY(-10px);
+}
+
+.booking{
+max-width:900px;
+margin:auto;
+}
+
+.booking form{
+display:grid;
+gap:20px;
+}
+
+.booking input,
+.booking textarea,
+.booking select{
+padding:15px;
+background:#111;
+border:none;
+color:white;
+border-radius:10px;
+}
+
+.booking button{
+background:#D4AF37;
+color:black;
+font-weight:700;
+padding:15px;
+border:none;
+border-radius:10px;
+cursor:pointer;
+}
+
+.testimonials{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+.review{
+background:#111;
+padding:25px;
+border-radius:15px;
+}
+
+.faq-item{
+margin-bottom:20px;
+background:#111;
+padding:20px;
+border-radius:10px;
+}
+
+.contact{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+}
+
+footer{
+background:#111;
+text-align:center;
+padding:40px;
+margin-top:50px;
+}
+
+@media(max-width:768px){
+
+.hero-content h1{
+font-size:45px;
+}
+
+.about,
+.contact{
+grid-template-columns:1fr;
+}
+
+.stats{
+grid-template-columns:1fr 1fr;
+}
+
+nav ul{
+display:none;
+}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="logo">DC INKING</div>
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#portfolio">Portfolio</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#booking">Booking</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>
+Ink Beyond
+<span class="gold">Imagination</span>
+</h1>
+
+<p>
+Custom Tattoos Designed with Passion,
+Precision and Creativity.
+</p>
+
+<div class="buttons">
+<button class="btn primary">Book Appointment</button>
+<button class="btn secondary">View Portfolio</button>
+</div>
+
+</div>
+
+</section>
+
+<section id="about">
+
+<h2 class="section-title">About<br> DC INKING</h2>
+
+<div class="about">
+
+<img src="black dc.jpeg" alt="DC INK IT portrait">
+
+<div class="about-text">
+
+<p>
+Every tattoo tells a story.
+DC INK IT specializes in custom body art,
+realism, portraits, fine-line work,
+black & grey tattoos, cover-ups and
+custom artistic designs.
+</p>
+
+<div class="stats">
+
+<div class="stat">
+<h3>10+</h3>
+<p>Years</p>
+</div>
+
+<div class="stat">
+<h3>1000+</h3>
+<p>Tattoos</p>
+</div>
+
+<div class="stat">
+<h3>500+</h3>
+<p>Clients</p>
+</div>
+
+<div class="stat">
+<h3>9</h3>
+<p>Styles</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="portfolio">
+
+<h2 class="section-title">My Work</h2>
+
+<div class="gallery">
+
+<img src="image0.jpeg" alt="Tattoo portfolio image 1">
+<img src="image4.jpeg" alt="Tattoo portfolio image 2">
+<img src="image7.jpeg" alt="Tattoo portfolio image 3">
+<img src="image8.jpeg" alt="Tattoo portfolio image 4">
+<img src="image11.jpeg" alt="Tattoo portfolio image 5">
+<img src="image13.jpeg" alt="Tattoo portfolio image 6">
+
+</div>
+
+</section>
+
+<section id="services">
+
+<h2 class="section-title">Services</h2>
+
+<div class="services">
+
+<div class="card">
+<h3>Custom Tattoos</h3>
+<p>Starting from £XXX</p>
+</div>
+
+<div class="card">
+<h3>Cover-Ups</h3>
+<p>Starting from £XXX</p>
+</div>
+
+<div class="card">
+<h3>Touch-Ups</h3>
+<p>Starting from £XXX</p>
+</div>
+
+<div class="card">
+<h3>Sleeve Designs</h3>
+<p>Starting from £XXX</p>
+</div>
+
+<div class="card">
+<h3>Consultations</h3>
+<p>Starting from £XXX</p>
+</div>
+
+<div class="card">
+<h3>Custom Artwork</h3>
+<p>Starting from £XXX</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="booking">
+
+<h2 class="section-title">Book Appointment</h2>
+
+<div class="booking">
+
+<form>
+
+<input type="text" placeholder="Full Name">
+
+<input type="email" placeholder="Email">
+
+<input type="tel" placeholder="Phone Number">
+
+<select>
+<option>Tattoo Size</option>
+<option>Small</option>
+<option>Medium</option>
+<option>Large</option>
+</select>
+
+<textarea rows="6" placeholder="Describe Your Tattoo Idea"></textarea>
+
+<button type="button" onclick="window.location.href='mailto:Isaacsam454@gmail.com'">
+Book Appointment
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Testimonials</h2>
+
+<div class="testimonials">
+
+<div class="review">
+⭐⭐⭐⭐
+<p>
+Amazing artist. Incredible attention to detail.
+</p>
+</div>
+
+<div class="review">
+⭐⭐⭐⭐⭐
+<p>
+Best tattoo experience I've ever had.
+</p>
+</div>
+
+<div class="review">
+⭐⭐⭐⭐
+<p>
+My sleeve exceeded every expectation.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">FAQ</h2>
+
+<div class="faq-item">
+<h3>How much do tattoos cost?</h3>
+<p>Pricing depends on size and complexity.</p>
+</div>
+
+<div class="faq-item">
+<h3>Do consultations require a deposit?</h3>
+<p>Yes. Deposits secure your appointment.</p>
+</div>
+
+<div class="faq-item">
+<h3>How should I prepare?</h3>
+<p>Stay hydrated and get a good night's sleep.</p>
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2 class="section-title">Contact</h2>
+
+<div class="contact">
+
+<div>
+<h3>Email</h3>
+<p>Isaacsam454@gmail.com</p>
+
+<h3>Phone</h3>
+<p>+234 7082 941 262</p>
+
+<h3>Hours</h3>
+<p>Mon-Sat: 10AM - 8PM</p>
+</div>
+
+
+
+</div>
+
+</section>
+
+<footer>
+
+<h2 class="gold">DC INKING</h2>
+
+<p>
+Every Tattoo Tells A Story
+</p>
+
+</footer>
+
+</body>
+</html>
